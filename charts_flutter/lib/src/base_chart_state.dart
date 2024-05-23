@@ -128,7 +128,7 @@ class BaseChartState<D> extends State<BaseChart<D>>
       if (behavior is BuildableBehavior) {
         assert(id != chartContainerLayoutID);
 
-        final buildableBehavior = behavior as BuildableBehavior;
+        final buildableBehavior = behavior;
         idAndBehaviorMap[id] = buildableBehavior;
 
         final widget = buildableBehavior.build(context);

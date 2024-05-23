@@ -164,7 +164,7 @@ abstract class BaseChart<D> extends StatefulWidget {
 
       // Assign the chart state to any behavior that needs it.
       if (commonBehavior is ChartStateBehavior) {
-        (commonBehavior as ChartStateBehavior).chartState = chartState;
+        (commonBehavior).chartState = chartState;
       }
 
       chart.addBehavior(commonBehavior);
