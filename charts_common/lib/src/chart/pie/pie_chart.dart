@@ -70,8 +70,10 @@ class PieChart<D> extends BaseChart<D> {
 
       final details = renderer.getExpandedDatumDetails(seriesDatum);
 
-      entries.add(details);
-        }
+      if (details != null) {
+        entries.add(details);
+      }
+    }
 
     return entries;
   }

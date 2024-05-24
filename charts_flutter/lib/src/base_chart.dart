@@ -161,9 +161,11 @@ abstract class BaseChart<D> extends StatefulWidget {
     // Add any remaining/new behaviors.
     behaviorList.forEach((ChartBehavior<D> behaviorWidget) {
       final commonBehavior = behaviorWidget.createCommonBehavior();
-      final cb = behaviorWidget.createCommonBehavior() as ChartStateBehavior;
+
       // Assign the chart state to any behavior that needs it.
-      cb.chartState = chartState;
+      if (commonBehavior is ChartStateBehavior) {
+        (commonBehavior as ChartStateBehavior).chartState = chartState;
+      }
 
       chart.addBehavior(commonBehavior);
       chartState.addedBehaviorWidgets.add(behaviorWidget);

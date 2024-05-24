@@ -233,7 +233,7 @@ abstract class BaseTickDrawStrategy<D> implements TickDrawStrategy<D> {
       AxisOrientation orientation,
       {bool collision = false}) {
     final isVertical =
-        orientation == AxisOrientation.right ||
+        orientation != null && orientation == AxisOrientation.right ||
             orientation == AxisOrientation.left;
     final rotationRelativeToAxis =
         labelRotation(collision: collision).toDouble();
