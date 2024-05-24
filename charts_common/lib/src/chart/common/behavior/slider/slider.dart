@@ -319,7 +319,8 @@ class Slider<D> implements ChartBehavior<D> {
 
   /// Fires a [SliderListenerDragState] change event if needed.
   void _fireChangeEvent(ChartCanvas _) {
-    if (_sliderEventListener.onChange == null) {
+    if (SliderListenerDragState == null ||
+        _sliderEventListener.onChange == null) {
       return;
     }
 

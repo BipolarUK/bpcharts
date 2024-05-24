@@ -60,7 +60,7 @@ class SelectionModel<D> {
     if (selectedDataConfig != null) {
       for (final config in selectedDataConfig) {
         selectedDataMap[config.seriesId] ??= <D>[];
-        selectedDataMap[config.seriesId]!.add(config.domainValue);
+        selectedDataMap[config.seriesId]!.add(config.domainValue as D);
       }
 
       // Add to list of selected series.

@@ -160,7 +160,7 @@ class SunburstArcLabelDecorator<D> extends ArcLabelDecorator<D> {
           outsideArcWidth,
           arcRendererElement,
           outerRingArcLabelPosition);
-    } else if ((arcRendererElement).isLeaf ==
+    } else if ((arcRendererElement as SunburstArcRendererElement).isLeaf ==
         true) {
       return super.calculateLabelPosition(
           labelElement,

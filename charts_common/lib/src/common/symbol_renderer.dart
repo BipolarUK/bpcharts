@@ -328,6 +328,14 @@ class CylinderSymbolRenderer extends PointSymbolRenderer {
       Color? fillColor,
       Color? strokeColor,
       double? strokeWidthPx}) {
+    if (p1 == null) {
+      throw ArgumentError('Invalid point p1 "${p1}"');
+    }
+
+    if (p2 == null) {
+      throw ArgumentError('Invalid point p2 "${p2}"');
+    }
+
     final adjustedP1 = Point<double>(p1.x, p1.y);
     final adjustedP2 = Point<double>(p2.x, p2.y);
 
@@ -360,6 +368,14 @@ class RectangleRangeSymbolRenderer extends PointSymbolRenderer {
       Color? fillColor,
       Color? strokeColor,
       double? strokeWidthPx}) {
+    if (p1 == null) {
+      throw ArgumentError('Invalid point p1 "${p1}"');
+    }
+
+    if (p2 == null) {
+      throw ArgumentError('Invalid point p2 "${p2}"');
+    }
+
     final adjustedP1 = Point<double>(p1.x, p1.y);
     final adjustedP2 = Point<double>(p2.x, p2.y);
 
